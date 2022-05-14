@@ -21,11 +21,7 @@ RUN apt-get update && apt-get install -y software-properties-common && \
     neofetch python3-dev git bash build-essential nodejs npm ruby \
     python-minimal locales python-lxml qbittorrent-nox nginx gettext-base xz-utils \
     # install extraction tools
-    p7zip-full p7zip-rar rar unrar zip unzip \
-    # miscellaneous helpers
-    megatools mediainfo && \
-    # clean up the container "layer", after we are done
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    p7zip-full p7zip-rar rar unrar zip
 
 # Copies config(if it exists)
 COPY . .
