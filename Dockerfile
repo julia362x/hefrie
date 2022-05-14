@@ -10,7 +10,6 @@ RUN apt-get -qq update && \
     wget git zip unzip \
     p7zip-full p7zip-rar
 
-RUN chmod +x aria.sh
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 COPY . .
