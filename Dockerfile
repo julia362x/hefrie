@@ -23,6 +23,14 @@ RUN apt-get update && apt-get install -y software-properties-common && \
     # install extraction tools
     p7zip-full p7zip-rar rar unrar zip
 
+ENV LANG C.UTF-8
+
+# we don't have an interactive xTerm
+ENV DEBIAN_FRONTEND noninteractive
+
+# sets the TimeZone, to be used inside the container
+ENV TZ Asia/Kolkata
+
 # Copies config(if it exists)
 COPY . .
 
